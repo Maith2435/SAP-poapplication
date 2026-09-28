@@ -7,11 +7,6 @@ module.exports = cds.service.impl(async function () {
     const {PurchaseOrderSrv}=this.entities;
     
 
-    // Implementation of an action
-    // There are 3 generic handlers
-    // .before() : Pre-check and validation
-    // .on()     : Performing DB operations
-    // .after()  : To save / close connections
     this.before('UPDATE',EmployeeSrv,async(request,response)=>{
         const salaryAmt = request.data.salaryAmount;
         if (salaryAmt > 100000){
