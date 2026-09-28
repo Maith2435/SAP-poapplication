@@ -1,0 +1,204 @@
+### Read the employee data
+http://localhost:4004/odata/v4/catalog/EmployeeSrv
+
+
+###
+POST http://localhost:4004/odata/v4/catalog/createEmployee
+Content-Type: application/json
+
+{
+    "Currency_code": "INR",
+    "ID": "211",
+    "accountNumber": "ACC10002",  
+    "bankId": "B002",
+    "bankName": "ICICI Bank",
+    "email": "priya.patil@example.com",
+    "gender": "F",
+    "language": "EN",
+    "loginName": "priya.patil",
+    "nameFirst": "Priya",
+    "nameInitials": "PP",
+    "nameLast": "Patil",
+    "nameMiddle": "Rani",
+    "phoneNumber": "9876543211",
+    "salaryAmount": "82000.00" 
+}
+
+### Read the employee data
+http://localhost:4004/odata/v4/catalog/AddressSrv
+
+
+###
+POST http://localhost:4004/odata/v4/catalog/createAddress
+Content-Type: application/json
+
+{
+    "ADDRESS_TYPE": "HOME",
+    "BUILDING": "Building A",
+    "CITY": "Bangalore",
+    "COUNTRY": "India",
+    "LATITUDE": "12.971600",
+    "LONGITUDE": "77.594600",
+    "POSTAL_CODE": "560001",
+    "STREET": "MG Road",
+    "VAL_END": "2026-12-31",
+    "VAL_START": "2026-01-01"
+}
+
+###Read the employee data
+http://localhost:4004/odata/v4/catalog/EmployeeSrv
+### Send Request
+POST http://localhost:4004/odata/v4/catalog/updateEmployee
+Content-Type: application/json
+
+{
+    "ID":"2",
+    "salaryAmount": "50000.00",
+    "Currency_code": "INR"
+}
+
+### Read the employee data
+http://localhost:4004/odata/v4/catalog/AddressSrv
+
+###
+POST http://localhost:4004/odata/v4/catalog/updateAddress
+Content-Type: application/json
+
+{
+    "NODE_KEY": "729077fe-35c5-45ba-9325-dca28d15ccf7",
+    "CITY": "Nagpur"
+
+}
+
+### Read the employee data
+http://localhost:4004/odata/v4/catalog/ProductSrv
+
+###
+POST http://localhost:4004/odata/v4/catalog/createProduct
+Content-Type: application/json
+
+{
+    "CATEGORY": "Electronics",
+      "CURRENCY_CODE": "INR",
+      "DEPTH": "25.00",
+      "DESCRIPTION": "Laptop Computer",
+      "DIM_UNIT": "CM",
+      "HEIGHT": "2.00",
+      "MEASURE_UNIT": "PC",
+      "NODE_KEY": "11111111-1111-1111-1111-111111111234",
+      "PRICE": "75000.00",
+      "PRODUCT_ID": "P001",
+      "TAX_TARIF_CODE": 10,
+      "TYPE_CODE": "EL",
+      "WEIGHT_MEASURE": "2.50",
+      "WEIGHT_UNIT": "KG",
+      "WIDTH": "35.00"    
+}
+
+###
+POST http://localhost:4004/odata/v4/catalog/updateProductPrice
+Content-Type: application/json
+
+{
+    "NODE_KEY": "44444444-4444-4444-4444-444444444444",
+    "PRICE": 2000.00
+}
+### Read the employee data
+http://localhost:4004/odata/v4/catalog/EmployeeSrv
+### Send Request
+POST http://localhost:4004/odata/v4/catalog/deleteEmployee
+Content-Type: application/json
+
+{
+    "ID": "2"
+
+}
+
+###
+http://localhost:4004/odata/v4/catalog/ProductSrv
+
+### Count Number of Employees
+http://localhost:4004/odata/v4/catalog/ProductSrv/$count
+
+### Count Number of Employees
+http://localhost:4004/odata/v4/catalog/ProductSrv?$top=10
+
+### Count Number of Employees
+http://localhost:4004/odata/v4/catalog/ProductSrv?$top=10&$skip=10
+
+###
+http://localhost:4004/odata/v4/catalog/ProductSrv?$filter=CATEGORY eq 'Notebooks'&DIM_UNIT eq 'CM'
+
+###
+http://localhost:4004/odata/v4/catalog/ProductSrv?$select=PRODUCT_ID,DESCRIPTION,CATEGORY,PRICE
+
+###
+http://localhost:4004/odata/v4/catalog/ProductSrv?$orderby=PRODUCT_ID desc
+
+###
+http://localhost:4004/odata/v4/catalog/ProductSrv('74867AD200E41EDBA5D8B06B26F8C052')/PRODUCT_ID
+
+###
+http://localhost:4004/odata/v4/catalog/ProductSrv('74867AD200E41EDBA5D8B06B26F8C052')/PRODUCT_ID/$value
+
+###
+http://localhost:4004/odata/v4/catalog/PurchaseOrderSrv?$expand=Items
+ 
+###
+PUT http://localhost:4004/odata/v4/catalog/EmployeeSrv/02BD2137-0890-1EEA-A6C2-BB55C19787FB
+Content-Type: application/json
+
+{
+    "salaryAmount" : "105000",
+    "Currency_code" : "USD"
+}
+
+###
+PUT http://localhost:4004/odata/v4/catalog/ProductSrv/33333333-3333-3333-3333-333333333333
+Content-Type: application/json
+
+{
+    "PRICE": "5500.00",
+    "PRODUCT_ID": "P002"
+
+}
+###
+http://localhost:4004/odata/v4/catalog/PurchaseItemSrv
+
+###
+GET http://localhost:4004/odata/v4/catalog/getHighestSalariedEmployees()
+
+###
+GET http://localhost:4004/odata/v4/catalog/getHeighestPricedProduct()
+
+###
+GET  http://localhost:4004/odata/v4/catalog/EmployeeSrv
+Content-Type: application/json
+
+###
+GET http://localhost:4004/odata/v4/catalog/PurchaseOrderSrv
+ 
+ 
+###
+POST http://localhost:4004/odata/v4/catalog/PurchaseOrderSrv/74867AD200E41EDBA5D8B0C98DE00052/discountPrice
+Content-Type: application/json
+ 
+{}
+
+### 
+GET http://localhost:4004/odata/v4/catalog/PurchaseOrderSrv/748674D200E41EDBA508E0C98DC2A052/largestOrder()
+
+###
+GET http://localhost:4004/odata/v4/catalog/ProductSrv/550e8400-e29b-41d4-a716-446655440001/top_20_product()
+
+###
+POST http://localhost:4004/odata/v4/catalog/EmployeeSrv/02BD2137-0890-1EEA-A6C2-BB55C197C7FB/increaseSalary
+Content-Type: application/json
+
+{}
+
+###
+GET http://localhost:4004/odata/v4/catalog/EmployeeSrv/02BD2137-0890-1EEA-A6C2-BB55C197C7FB/top20HighestPaidEmployees()
+
+### Read the employee data
+GET http://localhost:4004/odata/v4/catalog/getUtilities()

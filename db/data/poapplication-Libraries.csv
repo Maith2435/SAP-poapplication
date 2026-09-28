@@ -1,0 +1,11 @@
+bookId,bookName,dateofissue,dateofreturn,bookauthor,available
+1,101,The Alchemist,2026-01-10,2026-01-20,Paulo Coelho,false
+2,102,Harry Potter and the Philosopher's Stone,2026-02-05,2026-02-15,J K Rowling,false
+3,103,Wings of Fire,2026-02-12,2026-02-22,A P J Abdul Kalam,true
+4,104,Clean Code,2026-03-01,2026-03-10,Robert C Martin,false
+5,105,The Pragmatic Programmer,2026-03-08,2026-03-18,Andrew Hunt,true
+6,106,Introduction to Algorithms,2026-04-01,2026-04-20,Thomas H Cormen,false
+7,107,Rich Dad Poor Dad,2026-04-15,2026-04-25,Robert Kiyosaki,true
+8,108,Think and Grow Rich,2026-05-01,2026-05-12,Napoleon Hill,false
+9,109,Atomic Habits,2026-05-10,2026-05-20,James Clear,true
+10,110,The Great Gatsby,2026-06-01,2026-06-15,F Scott Fitzgerald,true
